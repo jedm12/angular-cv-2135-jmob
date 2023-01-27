@@ -12,7 +12,7 @@
       class="navbar bg-body-tertiary px-3 mb-3 navbar-light"
       style="background-color: #EADDCA;"
     >
-      <a class="navbar-brand" href="#">Jed</a>
+      <a class="navbar-brand" href="#">{{ myname }}</a>
       <ul class="nav nav-pills">
         <li class="nav-item">
           <a class="nav-link" href="#">Home</a>
@@ -20,27 +20,14 @@
         <li class="nav-item">
           <a class="nav-link" href="#scrollspyHeading2"> About</a>
         </li>
-        <li class="nav-item dropdown">
-          <a
-            class="nav-link dropdown-toggle"
-            data-bs-toggle="dropdown"
-            href="#"
-            role="button"
-            aria-expanded="false"
-            >More</a
-          >
-          <ul class="dropdown-menu">
-            <li>
-              <a class="dropdown-item" href="#scrollspyHeading3">Third</a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="#scrollspyHeading4">Fourth</a>
-            </li>
-            <li><hr class="dropdown-divider" /></li>
-            <li>
-              <a class="dropdown-item" href="#scrollspyHeading5">Fifth</a>
-            </li>
-          </ul>
+        <li class="nav-item">
+          <a class="nav-link" href="#scrollspyHeading3"> Skills</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#scrollspyHeading4"> Education</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#scrollspyHeading5"> Reference</a>
         </li>
       </ul>
     </nav>
@@ -60,35 +47,36 @@
           id="header"
         />
       </div>
-      <h4 id="scrollspyHeading2"></h4>
-      <app-about></app-about>
-      <h4 id="scrollspyHeading3">Third heading</h4>
-      <p>...</p>
-      <h4 id="scrollspyHeading4">Fourth heading</h4>
-      <p>...</p>
-      <h4 id="scrollspyHeading5">Fifth heading</h4>
-      <p>...</p>
+      <h4 id="scrollspyHeading2"><app-about></app-about></h4>
+      <h4 id="scrollspyHeading3"><app-skills></app-skills></h4>
+      <h4 id="scrollspyHeading4"><app-education></app-education></h4>
+      <h4 id="scrollspyHeading5"><app-reference></app-reference></h4>
     </div>
 
     <div class="container-fluid" id="container-fluid"></div>
-    <hello name="{{ myname }}"></hello>
-    <p>Start editing to see some magic happen :)</p>
-    <app-education></app-education>
-    <app-skills></app-skills>
-    <app-reference></app-reference>
   </body>
-
   <style>
+        a{
+          padding-left: 50px;
+          color: #722F37;
+        }
+        img#header{
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        div#container-fluid{
+          background-image: url(https://stackblitz.com/files/angular-cv-2135-jmob/github/jedm12/angular-cv-2135-jmob/main/picture/1.png);
+          background-repeat: no-repeat;
+          background-size: 100% 100%;
+        }
 
-    img#header{
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    div#container-fluid{
-      background-image: url(https://stackblitz.com/files/angular-cv-2135-jmob/github/jedm12/angular-cv-2135-jmob/main/picture/1.png);
-      background-repeat: no-repeat;
-      background-size: 100% 100%;
+        .theme-color {
+            color: #A0522D;
+        }
+        .dark-color {
+            color: 	#800000	;
+        }
     }
   </style>
 </html>
